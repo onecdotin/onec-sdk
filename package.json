@@ -2,11 +2,12 @@
   "name": "onec-client",
   "version": "0.1.0",
   "description": "Onec Client NPM Package",
-  "main": "src/index.js",
+  "main": "./dist/onec-client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=development",
-    "build:prod": "webpack --mode=production"
+    "build:prod": "webpack --mode=production",
+    "prepublishOnly": "webpack --mode=production"
   },
   "authors": [
     {
@@ -16,6 +17,15 @@
     }
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Wise-Org/onec-client.git"
+  },
+  "keywords": [
+    "onec",
+    "web3",
+    "npm"
+  ],
   "dependencies": {
     "@walletconnect/client": "^1.7.1",
     "@metamask/onboarding": "^1.0.1",
