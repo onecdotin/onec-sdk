@@ -1,5 +1,5 @@
 {
-  "name": "onec-client",
+  "name": "ceno-client",
   "version": "0.1.0",
   "description": "Onec Client NPM Package",
   "main": "./dist/onec-client.js",
