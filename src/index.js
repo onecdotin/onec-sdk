@@ -1,6 +1,6 @@
 import { withWalletConnect, withMetamask } from "./AuthUtils/WalletAuth";
 
-module.exports = {
+export default {
     withMetamask,
     withWalletConnect
 }

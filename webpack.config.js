@@ -5,7 +5,14 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'onec-client.js',
+        clean: true,
+        filename: 'onec-client.bundle.js',
+        library: {
+            name: 'onec',
+            type: 'umd',
+            umdNamedDefine: true,
+            export: 'default',
+        },
         publicPath: '/dist',
     },
     module: {
