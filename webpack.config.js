@@ -13,6 +13,7 @@ module.exports = {
             umdNamedDefine: true,
             export: 'default',
         },
+        globalObject: 'this',
         publicPath: '/dist',
     },
     module: {
