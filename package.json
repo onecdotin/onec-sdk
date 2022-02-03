@@ -1,6 +1,6 @@
 {
   "name": "onec-client",
-  "version": "0.1.0",
+  "version": "0.2.2",
   "description": "Onec Client NPM Package",
   "main": "./dist/onec-client.bundle.js",
   "scripts": {
@@ -34,7 +34,7 @@
   "dependencies": {
     "@walletconnect/client": "^1.7.1",
     "@metamask/onboarding": "^1.0.1",
-    "@walletconnect/qrcode-modal": "^1.6.5",
+    "@walletconnect/qrcode-modal": "^1.7.1",
     "axios": "^0.21.1"
   },
   "devDependencies": {
