@@ -1,6 +1,6 @@
 {
-  "name": "onec-client",
-  "version": "0.2.3",
+  "name": "onec-sdk",
+  "version": "0.1.1",
   "description": "Onec Client NPM Package",
   "main": "./dist/onec-client.bundle.js",
   "scripts": {
@@ -24,12 +24,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/The-Wise-Org/onec-client.git"
+    "url": "git+https://github.com/onecdotin/onec-sdk.git"
   },
   "keywords": [
     "onec",
     "web3",
-    "npm"
+    "npm",
+    "metamask",
+    "walletconnect"
   ],
   "dependencies": {
     "@walletconnect/client": "^1.7.1",
