@@ -19,7 +19,7 @@ Authentication via metamask
 
 Authentication via WalletConnect
 
-     Onec.auth.withWalletConnect().then((response) => {console.log(response)}).catch((error) => {console.log(error)});
+    Onec.auth.withWalletConnect().then((response) => {console.log(response)}).catch((error) => {console.log(error)});
 
 
 ## Demystifying Response Object
