@@ -1,6 +1,10 @@
 import { withWalletConnect, withMetamask } from "./AuthUtils/WalletAuth";
 
-export default {
+const auth = {
     withMetamask,
     withWalletConnect
+}
+
+export default {
+    auth
 }
