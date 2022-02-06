@@ -2,7 +2,7 @@
 
 ### v0.1
 The highlight of the release is `Onec.auth`. It saves all the hassle to incorporate web 3.0 based wallet authentication with just a few lines of code.
-Support. Not only that Onec SDK integrates the Onec User model into the application, thus you can save the hassle of maintaining user-DB. We can proudly say it as `web3 version of Google's Firebase Auth`.
+Not only that Onec SDK integrates the Onec User model into the application, thus you can save the hassle of maintaining user-DB. We can proudly say it as `web3 version of Google's Firebase Auth`.
 
 ## Getting Started:
 Install Onec-SDK from npm
