@@ -1,5 +1,5 @@
 {
-  "name": "onec-sdk",
+  "name": "ceno-sdk",
   "version": "0.1.1",
   "description": "Onec Client NPM Package",
   "main": "./dist/onec-client.bundle.js",
