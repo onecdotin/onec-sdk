@@ -104,7 +104,7 @@ function userLogin(resolve, reject) {
     axios.post(ONEC_AUTH_USERS_BASE_URL + 'init/' + _activeAccount + '/')
         .then((response) => {
             if (response.status >= 200 && response.status < 300) {
-                let message = response.data.message_to_sign;
+                let message = response.data.msg_to_sign;
                 _sessionId = response.data.session_id;
                 if (_authMethod === 'metamask')
                     return window.ethereum.request({
