@@ -1,6 +1,6 @@
 {
   "name": "onec-sdk",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Onec Client NPM Package",
   "main": "./dist/onec-client.bundle.js",
   "scripts": {
