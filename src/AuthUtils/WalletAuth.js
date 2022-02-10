@@ -109,7 +109,7 @@ function userLogin(resolve, reject) {
                 if (_authMethod === 'metamask')
                     return window.ethereum.request({
                         method: 'personal_sign',
-                        params: [message, window.ethereum.selectedAddress]
+                        params: [message, _activeAccount]
                     });
                 else if (_authMethod == 'walletconnect') {
                     return _wcConnector.signPersonalMessage(['' + message, _activeAccount]);
