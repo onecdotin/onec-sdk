@@ -1,8 +1,8 @@
-import MetaMaskOnboarding from '@metamask/onboarding';
-import WalletConnect from "@walletconnect/client";
-import QRCodeModal from "@walletconnect/qrcode-modal";
-import axios, { AxiosResponse, AxiosError } from 'axios';
-import * as constants from "../constants"
+var MetaMaskOnboarding = require("@metamask/onboarding");
+var WalletConnect = require("@walletconnect/client");
+var QRCodeModal = require("@walletconnect/qrcode-modal");
+var axios = require("axios");
+var constants = require("../constants");
 
 let ONEC_AUTH_USERS_BASE_URL = constants.ONEC_NAAS_BASE_URL;
 let _mmConnector = null;
@@ -140,7 +140,7 @@ function userLogin(resolve, reject) {
         }).catch((error) => { reject(error) });
 }
 
-export function withWalletConnect() {
+function withWalletConnect() {
     return new Promise((resolve, reject) => {
         if (isLoggedIn()) {
             if (_authMethod === 'walletconnect') {
@@ -163,7 +163,7 @@ export function withWalletConnect() {
     });
 }
 
-export function withMetamask() {
+function withMetamask() {
     return new Promise((resolve, reject) => {
         if (isLoggedIn()) {
             if (_authMethod === 'metamask') {
@@ -190,4 +190,9 @@ export function withMetamask() {
                 userLogin(resolve, reject);
             }).catch((error) => { ErrorHandler(error, reject) });
     });
+}
+
+module.exports = {
+    withWalletConnect,
+    withMetamask
 }
