@@ -1,8 +1,8 @@
 {
   "name": "ceno-sdk",
-  "version": "0.4.0",
+  "version": "0.6.2",
   "description": "Onec Client NPM Package",
-  "main": "./dist/onec-client.bundle.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=development",
@@ -38,7 +38,7 @@
     "@walletconnect/client": "^1.7.1",
     "@walletconnect/qrcode-modal": "^1.7.1",
     "axios": "^0.21.1",
-    "node-fetch": "^3.2.0"
+    "tslib": "^2.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",

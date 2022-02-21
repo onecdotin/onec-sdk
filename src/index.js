@@ -1,7 +1,8 @@
-import fetch from "node-fetch";
-import { withWalletConnect, withMetamask, ErrorHandler } from "./AuthUtils/WalletAuth";
+var constants = require("./constants");
+var axios = require('axios');
+var auth = require('./AuthUtils/WalletAuth');
 
-const DJANGO_BASE_URL = "https://api.onec.in/api/v1/naas/"
+const ONEC_AUTH_USERS_BASE_URL = constants.ONEC_NAAS_BASE_URL
 
 class naas {
     constructor(api_key) {
@@ -9,30 +10,168 @@ class naas {
     }
 
     async mintNFT(data) {
-        const url = `${DJANGO_BASE_URL}mintNFT/`
-        return fetch(url, {
-            method: 'POST',
-            body: JSON.stringify(data),
+        const url = `${ONEC_AUTH_USERS_BASE_URL}mintNFT/`
+        const resData = await axios.post(url, data, {
             headers: {
                 "Content-Type": "application/json",
                 "NAAS-APIKEY": this.api_key
             }
-        }).then(async response => {
-            const mintRes = await response.json()
-            return mintRes
         })
-        // const mintRes = await axios.post(url, data, {
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //         "NAAS-APIKEY": this.api_key
-        //     }
-        // })
-        // .then((response) => {
-        //     console.log(response)
-        //     return response;
-        // })
+        .then((response) => {
+            return response.data;
+        })
 
-        // return mintRes
+        return resData
+    }
+
+    async mintRefNFT(data) {
+        const url = `${ONEC_AUTH_USERS_BASE_URL}mintRefNFT/`
+        const resData = await axios.post(url, data, {
+            headers: {
+                "Content-Type": "application/json",
+                "NAAS-APIKEY": this.api_key
+            }
+        })
+        .then((response) => {
+            return response.data;
+        })
+
+        return resData
+    }
+
+    async checkMintStatus(txn_tracker) {
+        const url = `${ONEC_AUTH_USERS_BASE_URL}checkMintStatus/${txn_tracker}/`
+        const resData = await axios.get(url, {
+            headers: {
+                "Content-Type": "application/json",
+                "NAAS-APIKEY": this.api_key
+            }
+        })
+        .then((response) => {
+            return response.data;
+        })
+
+        return resData
+    }
+
+    async fetchTokenID(nft_id) {
+        const url = `${ONEC_AUTH_USERS_BASE_URL}fetchTokenId/${nft_id}/`
+        const resData = await axios.get(url, {
+            headers: {
+                "Content-Type": "application/json",
+                "NAAS-APIKEY": this.api_key
+            }
+        })
+        .then((response) => {
+            return response.data;
+        })
+
+        return resData
+    }
+
+    async fetchRefTokenID(refnft_id) {
+        const url = `${ONEC_AUTH_USERS_BASE_URL}fetchRefTokenId/${refnft_id}/`
+        const resData = await axios.get(url, {
+            headers: {
+                "Content-Type": "application/json",
+                "NAAS-APIKEY": this.api_key
+            }
+        })
+        .then((response) => {
+            return response.data;
+        })
+
+        return resData
+    }
+
+    async getTokenMetadataHash(token_id) {
+        const url = `${ONEC_AUTH_USERS_BASE_URL}getTokenMetadataHash/${token_id}/`
+        const resData = await axios.get(url, {
+            headers: {
+                "Content-Type": "application/json",
+                "NAAS-APIKEY": this.api_key
+            }
+        })
+        .then((response) => {
+            return response.data;
+        })
+
+        return resData
+    }
+
+    async getRefNFTs(parent_id) {
+        const url = `${ONEC_AUTH_USERS_BASE_URL}getRefNFTs/${parent_id}/`
+        const resData = await axios.get(url, {
+            headers: {
+                "Content-Type": "application/json",
+                "NAAS-APIKEY": this.api_key
+            }
+        })
+        .then((response) => {
+            return response.data;
+        })
+
+        return resData
+    }
+
+    async getIpfsFiles() {
+        const url = `${ONEC_AUTH_USERS_BASE_URL}ipfsFile/`
+        const resData = await axios.get(url, {
+            headers: {
+                "Content-Type": "application/json",
+                "NAAS-APIKEY": this.api_key
+            }
+        })
+        .then((response) => {
+            return response.data;
+        })
+
+        return resData
+    }
+
+    async uploadIpfsFiles(files) {
+        const url = `${ONEC_AUTH_USERS_BASE_URL}ipfsFile/`
+        const resData = await axios.post(url, files, {
+            headers: {
+                "Content-Type": "multipart/form-data",
+                "NAAS-APIKEY": this.api_key
+            }
+        })
+        .then((response) => {
+            return response.data;
+        })
+
+        return resData
+    }
+
+    async getIpfsMetaData() {
+        const url = `${ONEC_AUTH_USERS_BASE_URL}ipfsMetaData/`
+        const resData = await axios.get(url, {
+            headers: {
+                "Content-Type": "application/json",
+                "NAAS-APIKEY": this.api_key
+            }
+        })
+        .then((response) => {
+            return response.data;
+        })
+
+        return resData
+    }
+
+    async uploadIpfsMetaData(data) {
+        const url = `${ONEC_AUTH_USERS_BASE_URL}ipfsMetaData/`
+        const resData = await axios.post(url, data, {
+            headers: {
+                "Content-Type": "application/json",
+                "NAAS-APIKEY": this.api_key
+            }
+        })
+        .then((response) => {
+            return response.data;
+        })
+
+        return resData
     }
 
     verifyKey() {
@@ -40,12 +179,7 @@ class naas {
     }
 }
 
-const auth = {
-    withMetamask,
-    withWalletConnect
-}
-
-export default {
-    auth,
-    naas
+module.exports = {
+    naas,
+    auth
 }

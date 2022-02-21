@@ -1,5 +1,5 @@
 node_modules/
-src
+# src
 # Ignore files with sensitive environment variables
 .env
 .env.test
