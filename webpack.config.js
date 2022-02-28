@@ -6,9 +6,9 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        filename: 'onec-client.bundle.js',
+        filename: 'onec-sdk.bundle.js',
         library: {
-            name: 'onec',
+            name: 'onec-sdk',
             type: 'umd',
             umdNamedDefine: true,
             export: 'default',

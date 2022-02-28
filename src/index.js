@@ -1,4 +1,4 @@
-import { withWalletConnect, withMetamask } from "./AuthUtils/WalletAuth";
+import { withWalletConnect, withMetamask } from "./web/AuthUtils/WalletAuth";
 
 const auth = {
     withMetamask,

@@ -1,8 +1,12 @@
 {
-  "name": "onec-sdk",
-  "version": "0.1.5",
-  "description": "Onec Client NPM Package",
-  "main": "./dist/onec-client.bundle.js",
+  "name": "ceno-test",
+  "version": "0.3.1",
+  "description": "ceno Client NPM Package",
+  "main": "./dist/onec-sdk.bundle.js",
+  "exports": {
+    ".": "./dist/onec-sdk.bundle.js",
+    "./client": "./src/client/onec-client.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=development",

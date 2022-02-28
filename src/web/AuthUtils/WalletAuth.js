@@ -2,7 +2,7 @@ import MetaMaskOnboarding from '@metamask/onboarding';
 import WalletConnect from "@walletconnect/client";
 import QRCodeModal from "@walletconnect/qrcode-modal";
 import axios, { AxiosResponse, AxiosError } from 'axios';
-import * as constants from "../constants"
+import * as constants from "../../constants"
 
 let ONEC_AUTH_USERS_BASE_URL = constants.ONEC_NAAS_BASE_URL;
 let _mmConnector = null;
