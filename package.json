@@ -1,12 +1,8 @@
 {
-  "name": "ceno-test",
-  "version": "0.3.1",
+  "name": "ceno-sdk",
+  "version": "0.7.9",
   "description": "ceno Client NPM Package",
   "main": "./dist/onec-sdk.bundle.js",
-  "exports": {
-    ".": "./dist/onec-sdk.bundle.js",
-    "./client": "./src/client/onec-client.js"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=development",
@@ -38,15 +34,17 @@
     "walletconnect"
   ],
   "dependencies": {
-    "@walletconnect/client": "^1.7.1",
     "@metamask/onboarding": "^1.0.1",
+    "@walletconnect/client": "^1.7.1",
     "@walletconnect/qrcode-modal": "^1.7.1",
     "axios": "^0.21.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
+    "babel-polyfill": "^6.26.0",
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.2"
   }

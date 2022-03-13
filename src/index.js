@@ -1,4 +1,5 @@
 import { withWalletConnect, withMetamask } from "./web/AuthUtils/WalletAuth";
+import { naas } from "./client/onec-client";
 
 const auth = {
     withMetamask,
@@ -6,5 +7,6 @@ const auth = {
 }
 
 export default {
-    auth
+    auth,
+    naas
 }

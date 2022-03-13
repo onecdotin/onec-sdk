@@ -1,5 +1,8 @@
-var constants = require("../constants");
-var axios = require('axios');
+import "babel-polyfill";
+// var constants = require("../constants");
+import * as constants from "../constants";
+import axios from 'axios';
+// var axios = require('axios');
 
 const ONEC_AUTH_USERS_BASE_URL = constants.ONEC_NAAS_BASE_URL
 
@@ -178,6 +181,9 @@ class naas {
     }
 }
 
-module.exports = {
+// module.exports = {
+//     naas
+// }
+export {
     naas
 }
