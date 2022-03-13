@@ -1,8 +1,8 @@
 {
-  "name": "onec-sdk",
-  "version": "0.1.5",
-  "description": "Onec Client NPM Package",
-  "main": "./dist/onec-client.bundle.js",
+  "name": "@onecdot/auth",
+  "version": "0.1.1",
+  "description": "Onecdot-SDK",
+  "main": "./dist/onecdot-auth.bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=development",
@@ -25,6 +25,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/onecdotin/onec-sdk.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "onec",

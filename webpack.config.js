@@ -6,7 +6,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        filename: 'onec-client.bundle.js',
+        filename: 'onecdot-auth.bundle.js',
         library: {
             name: 'onec',
             type: 'umd',
